@@ -1,5 +1,4 @@
-import { useEffect, useState, useRef } from "react"
-import styles from "./Stopwatch.module.css"
+import { useState, useRef } from "react"
 
 const calculateTime = (time) => {
     let seconds = time % 60;
@@ -29,13 +28,11 @@ export default function StopWatch() {
     }
 
     return (
-        <div className={styles.watch}>
+        <>
             <h1>Stopwatch</h1>
-            <h1>Time : {calculateTime(time)}</h1>
-            <div className={styles.buttonDiv}>
-                <button onClick={clickHandler}>{isRunning ? "Stop" : "Start"}</button>
-                <button onClick={resetHandler}>Reset</button>
-            </div>
-        </div>
+            <p>Time: {calculateTime(time)}</p>
+            <button onClick={clickHandler}>{isRunning ? "Stop" : "Start"}</button>
+            <button onClick={resetHandler}>Reset</button>
+        </>
     )
 }
