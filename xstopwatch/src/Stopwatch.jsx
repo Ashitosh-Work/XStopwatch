@@ -31,7 +31,7 @@ export default function StopWatch() {
     return (
         <div className={styles.watch}>
             <h1>Stopwatch</h1>
-            <h3>Time : {calculateTime(time)}</h3>
+            <h1>Time : {calculateTime(time)}</h1>
             <div className={styles.buttonDiv}>
                 <button onClick={clickHandler}>{isRunning ? "Stop" : "Start"}</button>
                 <button onClick={resetHandler}>Reset</button>
